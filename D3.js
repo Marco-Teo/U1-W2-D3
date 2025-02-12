@@ -213,13 +213,13 @@ console.log(femaleCharacters)
 // iterare characters name
 // controllare se il valore dell'elemtento di characters name è all'interno di female character (usare includes)
 // se è presente rimuoverlo dai nomi 
-for(let i = 0; i<charactersNames.length; i++){
-if(charactersNames.includes("Leia Organa") || charactersNames.includes("Beru Whitesun lars")){
-  
+for(let i = 0; i<femaleCharacters.length; i++){
+  let index = charactersNames.indexOf(femaleCharacters[i].name); 
+    if (index !== -1) {
+        charactersNames.splice(index, 1); 
+    }
 }
 console.log(charactersNames)
-}
-
 /* --EXTRA-- ESERCIZIO 10
   Crea una funzionalità che selezioni un elemento casuale dall'array "starWarsCharacters" e ne stampi in console le proprietà in modo discorsivo (a tuo piacimento).
 */
